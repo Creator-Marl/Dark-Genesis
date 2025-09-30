@@ -40,4 +40,24 @@ document.addEventListener('DOMContentLoaded', function () {
             alert('Erreur lors de la connexion.');
         });
     });
+
+});
+
+document.querySelectorAll('form').forEach(form => {
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const formData = new FormData(form);
+    fetch('/submit', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+      alert('Form submitted successfully!');
+      window.location.href = 'https://tonnomdutilisateur.github.io/mon-site/'; // Rediriger vers la page d'accueil
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+  });
 });
