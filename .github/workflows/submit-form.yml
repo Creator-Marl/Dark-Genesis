@@ -3,7 +3,7 @@ name: Submit Form
 on:
   push:
     branches:
-      - main  # Change this to your branch name
+      - Dark-Genesis  # Change this to your branch name
 
 jobs:
   submit:
