@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const formDataPath = path.join(__dirname, 'form-data.json');
+const formDataPath = path.join(__dirname, 'package.json');
 
 // Simuler la réception des données du formulaire
 const formData = {
