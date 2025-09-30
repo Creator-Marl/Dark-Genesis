@@ -15,7 +15,7 @@ function openTab(event, tabName) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-    var loginForm = document.querySelector('#Tab2 form');
+    var loginForm = document.querySelector('#Tab2 and #Tab1 form');
     loginForm.addEventListener('submit', function (event) {
         event.preventDefault(); // Empêche le comportement par défaut du formulaire
 
@@ -45,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 });
+
 
 
 
