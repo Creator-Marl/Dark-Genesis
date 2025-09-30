@@ -54,10 +54,10 @@ document.querySelectorAll('form').forEach(form => {
     .then(response => response.json())
     .then(data => {
       alert('Form submitted successfully!');
-      window.location.href = 'https://tonnomdutilisateur.github.io/mon-site/'; // Rediriger vers la page d'accueil
     })
     .catch(error => {
       console.error('Error:', error);
     });
   });
 });
+
