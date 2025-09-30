@@ -28,12 +28,7 @@ jobs:
         PASSWORD: ${{ secrets.PASSWORD }}
 
     - name: Upload form-data.json
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: form-data
         path: form-data.json
-    - name: Run form submission script
-      run: node submit-form.js
-      env:
-        USERNAME: ${{ secrets.USERNAME }}
-        PASSWORD: ${{ secrets.PASSWORD }}
