@@ -26,9 +26,3 @@ jobs:
       env:
         USERNAME: ${{ secrets.USERNAME }}
         PASSWORD: ${{ secrets.PASSWORD }}
-
-    - name: Upload form-data.json
-      uses: actions/upload-artifact@v3
-      with:
-        name: form-data
-        path: form-data.json
